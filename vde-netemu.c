@@ -1470,50 +1470,50 @@ static int showinfo(int fd,char *s)
         WFNAME(node)?WFNAME(node):"",markov_numnodes-1,markov_time);
   }
   if (ndirs==2) {
-    printoutc(fd, "Loss   L->R %g+%g%c   R->L %g+%g%c",
+    printoutc(fd, "loss   L->R %g+%g%c   R->L %g+%g%c",
         WIREVALUE_FIELDS(node,LOSS,LR),
         WIREVALUE_FIELDS(node,LOSS,RL));
-    printoutc(fd, "Lburst L->R %g+%g%c   R->L %g+%g%c",
+    printoutc(fd, "lostburst L->R %g+%g%c   R->L %g+%g%c",
         WIREVALUE_FIELDS(node,LOSTBURST,LR),
         WIREVALUE_FIELDS(node,LOSTBURST,RL));
-    printoutc(fd, "Delay  L->R %g+%g%c   R->L %g+%g%c",
+    printoutc(fd, "delay  L->R %g+%g%c   R->L %g+%g%c",
         WIREVALUE_FIELDS(node,DELAY,LR),
         WIREVALUE_FIELDS(node,DELAY,RL));
-    printoutc(fd, "Dup  L->R %g+%g%c   R->L %g+%g%c",
+    printoutc(fd, "dup  L->R %g+%g%c   R->L %g+%g%c",
         WIREVALUE_FIELDS(node,DDUP,LR),
         WIREVALUE_FIELDS(node,DDUP,RL));
-    printoutc(fd, "Bandw  L->R %g+%g%c   R->L %g+%g%c",
+    printoutc(fd, "bandwidth  L->R %g+%g%c   R->L %g+%g%c",
         WIREVALUE_FIELDS(node,BAND,LR),
         WIREVALUE_FIELDS(node,BAND,RL));
-    printoutc(fd, "Speed  L->R %g+%g%c   R->L %g+%g%c",
+    printoutc(fd, "speed  L->R %g+%g%c   R->L %g+%g%c",
         WIREVALUE_FIELDS(node,SPEED,LR),
         WIREVALUE_FIELDS(node,SPEED,RL));
-    printoutc(fd, "Noise  L->R %g+%g%c   R->L %g+%g%c",
+    printoutc(fd, "noise  L->R %g+%g%c   R->L %g+%g%c",
         WIREVALUE_FIELDS(node,NOISE,LR),
         WIREVALUE_FIELDS(node,NOISE,RL));
     printoutc(fd, "MTU  L->R %g   R->L %g   ",
         min_wirevalue(node,MTU,LR),
         min_wirevalue(node,MTU,RL));
-    printoutc(fd, "Cap.   L->R %g+%g%c   R->L %g+%g%c",
+    printoutc(fd, "chanbufsize   L->R %g+%g%c   R->L %g+%g%c",
         WIREVALUE_FIELDS(node,CHANBUFSIZE,LR),
         WIREVALUE_FIELDS(node,CHANBUFSIZE,RL));
   } else {
-    printoutc(fd, "Loss   %g+%g%c",
+    printoutc(fd, "loss   %g+%g%c",
       WIREVALUE_FIELDS(node,LOSS,0));
-    printoutc(fd, "Lburst %g+%g%c",
+    printoutc(fd, "lostburst %g+%g%c",
       WIREVALUE_FIELDS(node,LOSTBURST,0));
-    printoutc(fd, "Delay  %g+%g%c",
+    printoutc(fd, "delay  %g+%g%c",
       WIREVALUE_FIELDS(node,DELAY,0));
-    printoutc(fd, "Dup  %g+%g%c",
+    printoutc(fd, "dup  %g+%g%c",
       WIREVALUE_FIELDS(node,DDUP,0));
-    printoutc(fd, "Bandw  %g+%g%c",
+    printoutc(fd, "bandwidth  %g+%g%c",
       WIREVALUE_FIELDS(node,BAND,0));
-    printoutc(fd, "Speed  %g+%g%c",
+    printoutc(fd, "speed  %g+%g%c",
       WIREVALUE_FIELDS(node,SPEED,0));
-    printoutc(fd, "Noise  %g+%g%c",
+    printoutc(fd, "noise  %g+%g%c",
       WIREVALUE_FIELDS(node,NOISE,0));
     printoutc(fd, "MTU  %g", min_wirevalue(node,MTU,0));
-    printoutc(fd, "Cap.   %g+%g%c",
+    printoutc(fd, "chanbufsize   %g+%g%c",
       WIREVALUE_FIELDS(node,CHANBUFSIZE,0));
   }
   printoutc(fd,"Fifoness %s",(nofifo == 0)?"TRUE":"FALSE");
